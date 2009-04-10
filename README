@@ -1,0 +1,24 @@
+PHP RESTClient
+--------------
+This library provides a simple abstraction in PHP for treating resources as objects that you 
+perform CRUD operations on. For example:
+
+$resource = new RESTClient(array('url' => 'http://www.example.com/my/resource'));
+$resource->post($data, $headers);
+$resource->get($data, $headers);
+$resource->put($data, $headers);
+$resource->delete();
+
+This API was inspired by the simple example provided in the Representation State Transfer wikipedia entry
+(http://en.wikipedia.org/wiki/Representational_State_Transfer) and the RESTful Web Services book by
+Leonard Richardson and Sam Ruby (http://oreilly.com/catalog/9780596529260/).
+
+LICENSE
+-------
+See the LICENSE file in this directory.
+
+TODO
+----
+  * Added tests and a simple server.
+  * HEAD support.
+  * HTTP Authentication support.
